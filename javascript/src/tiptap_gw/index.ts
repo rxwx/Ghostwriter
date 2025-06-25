@@ -15,6 +15,7 @@ import { type Extensions } from "@tiptap/core";
 import PageBreak from "./pagebreak";
 import Evidence from "./evidence";
 import FormattedCodeblock from "./codeblock";
+import Image from "./image";
 import {
     BoldCompat,
     HighlightCompat,
@@ -56,6 +57,11 @@ const EXTENSIONS: Extensions = [
     Evidence,
     TableWithCaption,
     TableCaption,
+    Image.configure({
+        HTMLAttributes: {
+            class: "editor-image",
+        },
+    }),
 ];
 
 export default EXTENSIONS;
